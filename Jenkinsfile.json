@@ -1,0 +1,31 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps { 
+                echo 'Welcome to checkout stage'
+            }
+        }
+        stage('Build') {
+            steps { 
+                echo 'stage is being build'
+            }
+        }
+        stage('Run') {
+            steps { 
+                echo 'stage is set to run'
+            }
+        }
+        stage('push to Artifactory') {
+            steps { 
+                echo 'pushing to artifactory'
+            }
+        }
+        stage('Deploy') {
+            steps { 
+                echo 'stage is set for deploy'
+            }
+        }
+    }
+}
